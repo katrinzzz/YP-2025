@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Ароматная Кофейня</title>
+    <link rel="stylesheet" href="site_2.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Ароматная Кофейня</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="menu.html">Меню</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Основное содержимое -->
+    <main class="container">
+        <h1 class="page-title">Наше меню</h1>
+        
+        <!-- Поиск и сортировка -->
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Поиск по меню...">
+            </div>
+            <div class="sort-options">
+                <button class="sort-btn" data-sort="price-asc">По цене ↑</button>
+                <button class="sort-btn" data-sort="price-desc">По цене ↓</button>
+                <button class="sort-btn" data-sort="name-asc">По названию А-Я</button>
+            </div>
+        </div>
+        
+        <!-- Список товаров -->
+        <div class="products" id="products-container">
+            <!-- Кофе -->
+            <div class="product-card" data-category="coffee" data-price="150" data-name="Эспрессо">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Эспрессо" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Эспрессо</h3>
+                    <p class="product-description">Классический крепкий кофе с насыщенным вкусом и плотной пенкой.</p>
+                    <div class="product-footer">
+                        <span class="product-price">150 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="coffee" data-price="180" data-name="Американо">
+                <img src="https://images.unsplash.com/photo-1551030173-122aabc4489c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Американо" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Американо</h3>
+                    <p class="product-description">Эспрессо с добавлением горячей воды для более мягкого вкуса.</p>
+                    <div class="product-footer">
+                        <span class="product-price">180 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="coffee" data-price="200" data-name="Капучино">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Капучино" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Капучино</h3>
+                    <p class="product-description">Идеальный баланс эспрессо, молока и воздушной молочной пены.</p>
+                    <div class="product-footer">
+                        <span class="product-price">200 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="coffee" data-price="220" data-name="Латте">
+                <img src="https://images.unsplash.com/photo-1568649929103-28ffbefaca1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Латте" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Латте</h3>
+                    <p class="product-description">Нежный кофейный напиток с большим количеством молока.</p>
+                    <div class="product-footer">
+                        <span class="product-price">220 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="coffee" data-price="240" data-name="Флэт Уайт">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Флэт Уайт" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Флэт Уайт</h3>
+                    <p class="product-description">Двойной эспрессо с микро-пеной для насыщенного вкуса.</p>
+                    <div class="product-footer">
+                        <span class="product-price">240 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="coffee" data-price="250" data-name="Раф">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Раф" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Раф</h3>
+                    <p class="product-description">Нежный напиток на основе эспрессо, сливок и ванильного сахара.</p>
+                    <div class="product-footer">
+                        <span class="product-price">250 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Десерты -->
+            <div class="product-card" data-category="dessert" data-price="180" data-name="Тирамису">
+                <img src="https://images.unsplash.com/photo-1535920527002-b35e96722eb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Тирамису" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Тирамису</h3>
+                    <p class="product-description">Классический итальянский десерт с кофейным вкусом.</p>
+                    <div class="product-footer">
+                        <span class="product-price">180 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="dessert" data-price="150" data-name="Чизкейк">
+                <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Чизкейк" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Чизкейк</h3>
+                    <p class="product-description">Нежный десерт из творожного сыра на песочной основе.</p>
+                    <div class="product-footer">
+                        <span class="product-price">150 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="dessert" data-price="120" data-name="Круассан">
+                <img src="https://gastromoments.ru/shop/kruassan" alt="Круассан" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Круассан</h3>
+                    <p class="product-description">Свежая французская выпечка с хрустящей корочкой.</p>
+                    <div class="product-footer">
+                        <span class="product-price">120 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="dessert" data-price="160" data-name="Маффин">
+                <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Маффин" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Маффин</h3>
+                    <p class="product-description">Нежный кекс с шоколадной крошкой или ягодами.</p>
+                    <div class="product-footer">
+                        <span class="product-price">160 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="dessert" data-price="200" data-name="Панна Котта">
+                <img src="https://lifehacker.ru/panna-kotta-recepty/" alt="Панна Котта" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Панна Котта</h3>
+                    <p class="product-description">Итальянский сливочный десерт с ягодным соусом.</p>
+                    <div class="product-footer">
+                        <span class="product-price">200 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="dessert" data-price="140" data-name="Печенье">
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Печенье" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Печенье</h3>
+                    <p class="product-description">Домашнее печенье с шоколадом или орехами.</p>
+                    <div class="product-footer">
+                        <span class="product-price">140 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Пагинация -->
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">→</button>
+        </div>
+    </main>
+    
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p>&copy; 2023 Ароматная Кофейня. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

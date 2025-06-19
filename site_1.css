@@ -1,0 +1,350 @@
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f5f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: #4a2c12;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e6c9a3;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #e6c9a3;
+        }
+        
+        /* Слайдер */
+        .slider {
+            margin-top: 80px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slider-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .slide-content {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            background-color: rgba(74, 44, 18, 0.8);
+            color: white;
+            padding: 30px;
+            max-width: 500px;
+            border-radius: 5px;
+        }
+        
+        .slide-content h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .slide-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e6c9a3;
+            color: #4a2c12;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #d4b48c;
+        }
+        
+        /* О кофейне */
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #4a2c12;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .about-item {
+            flex-basis: 30%;
+            margin-bottom: 30px;
+            padding: 30px;
+            background-color: #f9f5f0;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* Готово для анимации */
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .about-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .about-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-item i {
+            font-size: 40px;
+            color: #4a2c12;
+            margin-bottom: 20px;
+        }
+        
+        .about-item h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #4a2c12;
+        }
+        
+        .about-item p {
+            color: #333;
+        }
+        
+        /* Меню */
+        .menu {
+            padding: 80px 0;
+            background-color: #f9f5f0;
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .menu-item {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            /* Готово для анимации */
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .menu-item:nth-child(even) {
+            transform: translateX(0);
+        }
+        
+        .menu-item.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .menu-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .menu-item-content {
+            padding: 20px;
+        }
+        
+        .menu-item-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .menu-item-title h3 {
+            font-size: 20px;
+            color: #4a2c12;
+        }
+        
+        .menu-item-title span {
+            font-weight: bold;
+            color: #b88c5e;
+        }
+        
+        .menu-item-content p {
+            color: #333;
+        }
+        
+        /* Контакты */
+        .contacts {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .contact-map {
+            flex-basis: 60%;
+            height: 400px;
+            background-color: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+            /* Готово для анимации */
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .contact-map.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .contact-details {
+            flex-basis: 35%;
+            padding: 30px;
+            background-color: #f9f5f0;
+            border-radius: 5px;
+            /* Готово для анимации */
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .contact-details.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .contact-details h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #4a2c12;
+        }
+        
+        .contact-details p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .contact-details i {
+            color: #b88c5e;
+            margin-right: 10px;
+        }
+        
+        /* Подвал */
+        footer {
+            background-color: #4a2c12;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #e6c9a3;
+        }
+        
+        footer p {
+            color: white;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .about-item {
+                flex-basis: 100%;
+            }
+            
+            .contact-map,
+            .contact-details {
+                flex-basis: 100%;
+                margin-bottom: 30px;
+            }
+            
+            .slide-content {
+                left: 20px;
+                bottom: 20px;
+                max-width: 80%;
+            }
+        }
