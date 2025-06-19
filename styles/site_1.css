@@ -83,7 +83,7 @@
         }
         
         .slide-content {
-            position: absolute;
+            position: absolute ;
             bottom: 50px;
             left: 50px;
             background-color: rgba(74, 44, 18, 0.8);
